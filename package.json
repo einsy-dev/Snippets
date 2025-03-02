@@ -13,7 +13,7 @@
   "author": "einsy-dev",
   "license": "ISC",
   "description": "",
-  "bin": "bin/index.cjs",
+  "bin": "bin/index.js",
   "dependencies": {
     "@inquirer/prompts": "~5.1.2",
     "commander": "~12.1.0"
