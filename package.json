@@ -1,46 +1,28 @@
 {
-  "name": "react-simple-snippets",
-  "displayName": "react-simple-snippets",
-  "description": "",
-  "icon": "icons/icon.png",
-  "version": "1.0.5",
-  "engines": {
-    "vscode": "^1.89.0"
-  },
-  "publisher": "einsy",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/einsy-dev/VS-Code"
-  },
-  "license": "MIT",
+  "name": "snipgen",
+  "version": "1.0.0",
+  "main": "bin/index.cjs",
   "scripts": {
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "build": "tsup"
   },
-  "categories": [
-    "Snippets"
+  "keywords": [
+    "snippets",
+    "npm",
+    "vs-code"
   ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/js-ts.code-snippets"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./snippets/js-ts.code-snippets"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/js-ts.code-snippets"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/js-ts.code-snippets"
-      }
-    ]
+  "author": "einsy-dev",
+  "license": "ISC",
+  "description": "",
+  "bin": "bin/index.cjs",
+  "dependencies": {
+    "@inquirer/prompts": "~5.1.2",
+    "commander": "~12.1.0"
   },
   "devDependencies": {
-    "vsce": "^2.15.0"
+    "@types/inquirer": "~9.0.7",
+    "@types/node": "~20.14.10",
+    "esbuild": "~0.23.0",
+    "tsup": "^8.4.0",
+    "typescript": "~5.5.3"
   }
 }
