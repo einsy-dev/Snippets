@@ -1,0 +1,40 @@
+{
+  "name": "snipgen",
+  "version": "1.0.0",
+  "main": "bin/index.js",
+  "scripts": {
+    "link": "npm run build && npm link",
+    "build": "tsup",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "publish": "npm run build && npm publish"
+  },
+  "keywords": [
+    "snippets",
+    "npm",
+    "vs-code",
+    "cli",
+    "generator"
+  ],
+  "author": "einsy-dev",
+  "license": "ISC",
+  "description": "",
+  "bin": "bin/index.js",
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "commander": "^13.1.0",
+    "detype": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "~9.0.7",
+    "@types/node": "~22.13.9",
+    "esbuild": "^0.25.0",
+    "tsup": "^8.4.0",
+    "typescript": "~5.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/einsy-dev/Snippets.git"
+  }
+}

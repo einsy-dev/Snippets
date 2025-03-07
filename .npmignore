@@ -1,0 +1,10 @@
+/node_modules
+/src
+/test
+/out
+/dist
+.gitignore
+.npmignore
+package-lock.json
+tsconfig.json
+tsup.config.ts
