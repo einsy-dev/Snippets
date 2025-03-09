@@ -8,6 +8,7 @@ export async function convertFiles(files: FilesI): Promise<void> {
 }
 
 async function transorm(files: FilesI, from: string, to: string): Promise<void> {
+  if (!files[from]) return;
   for (const el of files[from]) {
     let newEl = {
       name: el.name.replace(from, to),

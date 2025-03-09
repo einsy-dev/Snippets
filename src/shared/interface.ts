@@ -16,22 +16,12 @@ interface SnippetsI {
   };
 }
 
-interface OptionsI {
-  dir?: string;
-  outDir?: string;
-  tsc?: boolean;
-  clean?: boolean;
-  extension?: boolean;
-  local?: boolean;
-  project?: boolean;
-}
-
 interface ConfigI {
   dir: string;
   outDir: string;
   tsc: boolean;
   clean: boolean;
-  target: "extention" | "local" | "project";
+  extention: boolean;
 }
 
-export type { FileI, FilesI, SnippetsI, OptionsI, ConfigI };
+export type { FileI, FilesI, SnippetsI, ConfigI };

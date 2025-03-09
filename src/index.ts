@@ -2,7 +2,7 @@
 import fs from "fs";
 import { Command } from "commander";
 import { snipgen } from "./snipgen";
-import { OptionsI, ConfigI } from "./shared/interface";
+import { ConfigI } from "./shared/interface";
 import Input from "./input";
 
 let version = JSON.parse(fs.readFileSync("./package.json", "utf8")).version;
@@ -15,34 +15,24 @@ async function main() {
     .option("-o --outDir [outDir]", "output folder path")
     .option("-c --clean", "clean output folder")
     .option("-t --tsc", "transpile to js")
-    .option("-e --extension", "build for extension")
-    .option("-l --local", "build for local")
-    .option("-p --project", "build for project")
+    .option("-e --extention", "build for extension")
     .parse();
 
-  let options: OptionsI = program.opts();
+  let options: ConfigI = program.opts();
   let config: ConfigI = {
     dir: "./src",
     outDir: "./out",
     tsc: false,
     clean: false,
-    target: "extention"
+    extention: false
   };
-
-  const { extension, local, project } = options;
-  if (extension || local || project) {
-    config.target = extension ? "extention" : local ? "local" : project ? "project" : "extention";
-    delete options.extension;
-    delete options.local;
-    delete options.project;
-  }
 
   if (!Object.keys(options).length) {
     await Input.text("dir", "Folder path with your code:", "./src");
     await Input.text("outDir", "Output folder path:", "./out");
-    await Input.confirm("clean", "Clean output folder:", true);
-    await Input.confirm("tsc", "Transpile ts/tsx files to js/jsx:", true);
-    await Input.select("target", "Build for:", ["extension", "local", "project"], "extension");
+    await Input.confirm("clean", "Clean output folder:", false);
+    await Input.confirm("tsc", "Transpile ts/tsx files to js/jsx:", false);
+    await Input.confirm("extention", "Build for extension:", false);
   }
   if (!Input.data.dir && !options.dir) {
     await Input.text("dir", "Folder path with your code:", "./src");
@@ -54,4 +44,3 @@ async function main() {
 }
 
 main();
-
