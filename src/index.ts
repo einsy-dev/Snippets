@@ -30,16 +30,16 @@ async function main() {
   if (!Object.keys(options).length) {
     await Input.text("dir", "Folder path with your code:", "./src");
     await Input.text("outDir", "Output folder path:", "./out");
-    await Input.confirm("clean", "Clean output folder:", false);
-    await Input.confirm("tsc", "Transpile ts/tsx files to js/jsx:", false);
-    await Input.confirm("extention", "Build for extension:", false);
+    await Input.confirm("clean", "Clean output folder:", true);
+    await Input.confirm("tsc", "Transpile ts/tsx files to js/jsx:", true);
+    await Input.confirm("extention", "Build for extension:", true);
   }
   if (!Input.data.dir && !options.dir) {
     await Input.text("dir", "Folder path with your code:", "./src");
   }
   options = Object.assign(options, Input.data);
   config = Object.assign(config, options);
-  
+
   await snipgen(options.dir!, config);
 }
 

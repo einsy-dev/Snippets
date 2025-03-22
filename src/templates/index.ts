@@ -7,8 +7,14 @@ export const extention = {
   contributes: {
     snippets: [] as SnippetI[]
   },
-
-  categories: ["Snippets"]
+  scrips: {
+    build: "vsce package",
+    publish: "vsce publish"
+  },
+  categories: ["Snippets"],
+  devDependencies: {
+    "vsce": "^2.15.0"
+  }
 };
 
 interface SnippetI {

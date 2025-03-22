@@ -6,5 +6,7 @@ export default defineConfig({
   clean: true,
   minify: true,
   treeshake: true,
-  outDir: "bin"
+  outDir: "bin",
+  silent: true,
+  cjsInterop: true
 });

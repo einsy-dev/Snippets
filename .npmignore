@@ -3,6 +3,7 @@
 /test
 /out
 /dist
+/images
 .gitignore
 .npmignore
 package-lock.json
