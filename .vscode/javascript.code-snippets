@@ -1,0 +1,164 @@
+{
+  "Console Log": {
+    "prefix": ["clg"],
+    "body": ["console.log"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Log ()": {
+    "prefix": ["clg()"],
+    "body": ["console.log($1);"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Error": {
+    "prefix": ["clge"],
+    "body": ["console.error"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Error ()": {
+    "prefix": ["clge()"],
+    "body": ["console.error($1);"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Warn": {
+    "prefix": ["clgw"],
+    "body": ["console.warn"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Warn ()": {
+    "prefix": ["clgw()"],
+    "body": ["console.warn($1);"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Info": {
+    "prefix": ["clgi"],
+    "body": ["console.info"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Console Info ()": {
+    "prefix": ["clgi()"],
+    "body": ["console.info($1);"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "const": {
+    "prefix": ["c", "const"],
+    "body": ["const $1 = $2;"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "let": {
+    "prefix": ["l", "let"],
+    "body": ["let $1;"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "import": {
+    "prefix": ["i", "imp", "import"],
+    "body": ["import { $1 } from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "import default": {
+    "prefix": ["id", "impd", "import default"],
+    "body": ["import $1 from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "import as from": {
+    "prefix": ["ia", "impa", "import all"],
+    "body": ["import * as $1 from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export": {
+    "prefix": ["e", "exp", "export"],
+    "body": ["export $1;"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export default": {
+    "prefix": ["ed", "expd", "export default"],
+    "body": ["export default $1;"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export from": {
+    "prefix": ["ef", "expf", "export from"],
+    "body": ["export { $1 } from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export default from": {
+    "prefix": ["edf", "expdf", "export default from"],
+    "body": ["export $1 from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export as default": {
+    "prefix": ["eadf", "expadf"],
+    "body": ["export { $1 as default } from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export all from": {
+    "prefix": ["eaf", "expaf", "export * from"],
+    "body": ["export * from \"$1\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export all as from": {
+    "prefix": ["eaaf", "expaaf"],
+    "body": ["export * as $1 from \"$2\";"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Arrow Function": {
+    "prefix": ["af", "arrf", "() => {"],
+    "body": ["($1) => { $2 };"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export const": {
+    "prefix": ["ecaf", "expcaf", "export const"],
+    "body": ["export const $1 = ($2) => { $3 };"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "Function Declaration": {
+    "prefix": ["f", "func", "function"],
+    "body": ["function $1($2) { $3 };"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export function": {
+    "prefix": ["ef", "expf", "export function()"],
+    "body": ["export function $1($2) { $3 };"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "async": {
+    "prefix": ["a", "async"],
+    "body": ["async"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "async function": {
+    "prefix": ["af", "asf", "async function"],
+    "body": ["async function $1($2) { $3 };"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  },
+  "export async function": {
+    "prefix": ["eaf", "expaf", "expasf", "export async function"],
+    "body": ["export async function $1($2) { $3 };"],
+    "description": "",
+    "scope": "javascript, javascriptreact, typescript, typescriptreact"
+  }
+}
