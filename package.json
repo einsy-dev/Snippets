@@ -1,13 +1,40 @@
 {
-  "name": "snippets",
-  "version": "1.0.0",
+  "name": "js-ts-snippets",
+  "displayName": "JS & TS Snippets",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
-  "keywords": [],
+  "keywords": [
+    "snippets",
+    "javascript",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "icon": "icon.png",
+  "type": "commonjs",
+  "publisher": "einsydev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/einsy-dev/Snippets"
+  },
+  "activationEvents": [],
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets.json"
+      }
+    ]
+  }
 }

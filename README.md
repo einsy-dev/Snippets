@@ -1,3 +1,14 @@
+# JavaScript and TypeScript Snippets for VSCode
+
+This repository contains a collection of simple JavaScript and TypeScript snippets for VSCode, created using the snipgen extension.
+
+## Usage
+
+To use these snippets, open a JavaScript or TypeScript file in VSCode and type the snippet name followed by a tab. The snippet will be inserted into the file at the cursor position.
+
+## Snippets
+
+```js
 console.log // clg
 console.log($1); // clg()
 console.error // clge
@@ -31,3 +42,4 @@ export function $1($2) { $3 }; // ef expf export function
 async // a async
 async function $1($2) { $3 }; // af asf async function
 export async function $1($2) { $3 }; // eaf expaf expasf export async function
+```
