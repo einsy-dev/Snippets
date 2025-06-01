@@ -3,7 +3,6 @@
   "displayName": "JS & TS Snippets",
   "version": "0.0.2",
   "description": "Set of simple JavaScript and TypeScript snippets for VSCode",
-  "main": "index.js",
   "scripts": {
     "package": "vsce package",
     "publish": "vsce publish"
@@ -22,11 +21,38 @@
     "type": "git",
     "url": "https://github.com/einsy-dev/Snippets"
   },
-  "activationEvents": [],
   "engines": {
     "vscode": "^1.100.0"
   },
   "categories": [
     "Snippets"
-  ]
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./.vscode/javascript.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./.vscode/javascript.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./.vscode/javascriptreact.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./.vscode/javascript.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./.vscode/javascript.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./.vscode/javascriptreact.code-snippets"
+      }
+    ]
+  }
 }
