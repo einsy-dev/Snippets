@@ -13,10 +13,10 @@
     "javascript",
     "typescript"
   ],
-  "author": "",
   "license": "ISC",
   "icon": "icon.png",
   "type": "commonjs",
+  "author": "einsy.dev",
   "publisher": "einsydev",
   "repository": {
     "type": "git",
@@ -28,5 +28,13 @@
   },
   "categories": [
     "Snippets"
-  ]
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "*",
+        "path": ".vscode/*.code-snippets"
+      }
+    ]
+  }
 }
