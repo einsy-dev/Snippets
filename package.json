@@ -28,13 +28,5 @@
   },
   "categories": [
     "Snippets"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "*",
-        "path": ".vscode/*.code-snippets"
-      }
-    ]
-  }
+  ]
 }
