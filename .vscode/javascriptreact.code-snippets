@@ -1,0 +1,238 @@
+{
+  "className={}": {
+    "prefix": ["cn className"],
+    "body": ["className={$1}"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useState": {
+    "prefix": ["us useState"],
+    "body": ["useState()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useEffect": {
+    "prefix": ["ue useEffect"],
+    "body": ["useEffect()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useLayoutEffect": {
+    "prefix": ["ule useLayoutEffect"],
+    "body": ["useLayoutEffect()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useRef": {
+    "prefix": ["ur useRef"],
+    "body": ["useRef()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "uneNavigation": {
+    "prefix": ["rrun uneNavigation"],
+    "body": ["uneNavigation()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useSelector": {
+    "prefix": ["rus useSelector"],
+    "body": ["useSelector()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useDispatch": {
+    "prefix": ["rud", "useDispatch"],
+    "body": ["useDispatch()"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "React Function Component": {
+    "prefix": ["rfc"],
+    "body": [
+      "function $1($2) {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>$1</div>",
+      "\t\t</>",
+      "\t)",
+      "}"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "React Class Component": {
+    "prefix": ["rcc"],
+    "body": [
+      "class $1 extends React.Component {",
+      "\tconstructor() { }",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<>",
+      "\t\t\t\t<div>$1</div>",
+      "\t\t\t</>",
+      "\t\t)",
+      "\t}",
+      "}"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "React Arrow Function Component": {
+    "prefix": ["rafc"],
+    "body": [
+      "const $1 = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>$1</div>",
+      "\t\t</>",
+      "\t)",
+      "}"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "React useMemo Arrow Function Component": {
+    "prefix": ["rumafc"],
+    "body": [
+      "const $1 = useMemo(() => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<div>$1</div>",
+      "\t\t</>",
+      "\t)",
+      "}, []);"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "hookUseSwipe": {
+    "prefix": ["hookUseSwipe"],
+    "body": [
+      "function useSwipe(",
+      "\tref = document,",
+      "\tcallback,",
+      "\tdeps = [],",
+      "\tignoreValue = 100",
+      ") {",
+      "\tlet startX, endX, startY, endY;",
+      "\tstartX = endX = startY = endY = 0;",
+      "",
+      "\tfunction touchStart(e) {",
+      "\t\tstartX = e.touches[0].clientX;",
+      "\t\tstartY = e.touches[0].clientY;",
+      "\t}",
+      "",
+      "\tfunction touchEnd(e) {",
+      "\t\tendX = e.changedTouches[0].clientX;",
+      "\t\tendY = e.changedTouches[0].clientY;",
+      "\t\tif (",
+      "\t\t\tMath.abs(startX - endX) < ignoreValue ||",
+      "\t\t\tMath.abs(startY - endY) > ignoreValue / 2",
+      "\t\t) {",
+      "\t\t\treturn;",
+      "\t\t}",
+      "\t\tif (startX - endX > 0) {",
+      "\t\t\tcallback(false);",
+      "\t\t} else {",
+      "\t\t\tcallback(true);",
+      "\t\t}",
+      "\t}",
+      "",
+      "\tuseEffect(() => {",
+      "\t\tref.addEventListener('touchstart', touchStart, false);",
+      "\t\tref.addEventListener('touchend', touchEnd, false);",
+      "",
+      "\t\treturn () => {",
+      "\t\t\tref.removeEventListener('touchstart', touchStart, false);",
+      "\t\t\tref.removeEventListener('touchend', touchEnd, false);",
+      "\t\t};",
+      "\t}, deps);",
+      "}"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "hookUseResize": {
+    "prefix": ["hookUseResize"],
+    "body": [
+      "function useResize(size) {",
+      "\tconst [state, setState] = useState(window.innerWidth <= config[size]);",
+      "",
+      "\tconst handleResize = (size) => {",
+      "\t\tconst width = window.innerWidth;",
+      "\t\tif (width <= size) {",
+      "\t\t\tsetState(true);",
+      "\t\t\treturn;",
+      "\t\t}",
+      "\t\tsetState(false);",
+      "\t};",
+      "",
+      "\tuseEffect(() => {",
+      "\t\twindow.addEventListener('resize', () => handleResize(config[size]));",
+      "\t\treturn () => {",
+      "\t\t\twindow.removeEventListener('resize', () => handleResize(config[size]));",
+      "\t\t};",
+      "\t}, [size]);",
+      "",
+      "\treturn state;",
+      "}"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "hookUseClickOutside": {
+    "prefix": ["hookUseClickOutside"],
+    "body": [
+      "function useClickOutside(ref, callback, deps) {",
+      "\tuseEffect(() => {",
+      "\t\tconst eventTypes = [",
+      "\t\t\t'mousedown',",
+      "\t\t\t'mouseup',",
+      "\t\t\t'focusin',",
+      "\t\t\t'focusout',",
+      "\t\t\t'touchstart',",
+      "\t\t\t'touchend'",
+      "\t\t];",
+      "",
+      "\t\tconst listener = (event) => {",
+      "\t\t\tif (!ref.current || ref.current.contains(event.target)) {",
+      "\t\t\t\treturn;",
+      "\t\t\t}",
+      "\t\t\tcallback(event);",
+      "\t\t};",
+      "",
+      "\t\teventTypes.forEach((eventType) =>",
+      "\t\t\tdocument.addEventListener(eventType, listener)",
+      "\t\t);",
+      "",
+      "\t\treturn () => {",
+      "\t\t\teventTypes.forEach((eventType) =>",
+      "\t\t\t\tdocument.removeEventListener(eventType, listener)",
+      "\t\t\t);",
+      "\t\t};",
+      "\t}, [ref, callback, ...deps]);",
+      "}"
+    ],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useSwipe": {
+    "prefix": ["usw"],
+    "body": ["useSwipe($1)"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useResize": {
+    "prefix": ["ur"],
+    "body": ["useResize($1)"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "useClickOutside": {
+    "prefix": ["uco"],
+    "body": ["useClickOutside($1)"],
+    "description": "",
+    "scope": "javascriptreact, typescriptreact"
+  }
+}
