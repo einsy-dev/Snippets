@@ -9,6 +9,7 @@ console.info($1); // clgi()
 
 const $1 = $2; // c const
 let $1;  // l let
+async // a async
 
 import { $1 } from "$2"; // i imp import
 import $1 from "$2"; // id impd import default
@@ -28,6 +29,5 @@ export const $1 = ($2) => { $3 }; // ecaf expaf export const
 function $1($2) { $3 }; // f func function
 export function $1($2) { $3 }; // ef expf export function
 
-async // a async
 async function $1($2) { $3 }; // af asf async function
 export async function $1($2) { $3 }; // eaf expaf expasf export async function

@@ -79,13 +79,13 @@
   },
   "export": {
     "prefix": ["e", "exp", "export"],
-    "body": ["export $1;"],
+    "body": ["export $1"],
     "description": "",
     "scope": "javascript, javascriptreact, typescript, typescriptreact"
   },
   "export default": {
     "prefix": ["ed", "expd", "export default"],
-    "body": ["export default $1;"],
+    "body": ["export default $1"],
     "description": "",
     "scope": "javascript, javascriptreact, typescript, typescriptreact"
   },
