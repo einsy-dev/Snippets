@@ -1,7 +1,7 @@
 {
   "name": "snippets-js-ts",
   "displayName": "JS & TS Snippets",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Set of simple JavaScript and TypeScript snippets for VSCode",
   "scripts": {
     "package": "vsce package",
