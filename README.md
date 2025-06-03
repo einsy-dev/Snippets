@@ -33,7 +33,7 @@ export { $1 as default } from "$2"; // eadf expadf
 export * from "$1"; // eaf expaf export * from
 export * as $1 from "$2"; // eaaf expaaf
 
-($1) => { $2 }; // af arrf () => {
+($1) => { $2 }; // af arrf
 export const $1 = ($2) => { $3 }; // ecaf expaf export const
 
 function $1($2) { $3 }; // f func function
